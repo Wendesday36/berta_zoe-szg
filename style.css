@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Verdana, sans-serif;
+    color: beige;
+    font-size: 10pt;
+    margin: 0;
+}
+body{
+    background-image: url(D_szgjatekok/kepek/black.png);
+}
+main{
+    margin: auto;
+    width: 90%;
+    max-width: 900px;
+    background-color: gray;
+    display: grid;
+    grid-template-areas: "h h"
+                        "n n"
+                        "a a"
+                        "f f ";
+
+}
+header{
+    height: 300px;
+    background-image: url(D_szgjatekok/kepek/game.jpg);
+    background-size: cover;
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+    background-color: rgb(75, 74, 74);
+    height: 40px
+}
+nav ul li,a{
+    text-decoration: none;
+    list-style: none; 
+    color: beige;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+nav ul li{
+    display: inline;
+    border-right: 1px white solid;
+    text-align: justify;
+   
+}
+nav ul{
+    padding: 0;
+}
+nav ul li:hover{
+    background-color: orange;
+}
+article{
+    text-align: justify;
+    grid-area: a;
+    margin: auto;
+}
+article h2{
+    font-size: 15px;
+    
+}
+.szoveg{
+    margin-left: auto;
+}
+article ul li{
+    font-size: 10px;
+}
+article img{
+    float: right;
+    width: 300px;
+    padding: 20px;
+}
+article ul li{
+    list-style: square;
+}
+footer{
+    grid-area: f;
+    background-color: orange;
+    text-align: center;
+    height: 20px;
+}
+@media screen and (max-width:700px) {
+    main{
+        margin: auto;
+        width: 90%;
+        max-width: 900px;
+        background-color: gray;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "h h"
+                            "n n"
+                            "a a"
+                            "f f ";
+    
+    }
+    article{
+        text-align: justify;
+
+    }
+    article img{
+        width: 150px;
+    }
+    nav ul li{
+        display:none;
+        border-left: 1px white solid;
+        text-align: left;
+    }
+}
